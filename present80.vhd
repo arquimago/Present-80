@@ -10,3 +10,4 @@ entity present80 is
  );
 end present80;
 
+--Fazer tudo por componentes e adicionar aqui com uma maquina de estado para rodar os 32 rounds

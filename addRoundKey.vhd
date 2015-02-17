@@ -5,8 +5,6 @@ entity addRoundKey is
  port (
  key: in STD_LOGIC_VECTOR (79 downto 0);
  bloco: in STD_LOGIC_VECTOR (63 downto 0);
- 
- rst,clk: in STD_LOGIC;
  saida: out STD_LOGIC_VECTOR (63 downto 0)
  );
 end addRoundKey;

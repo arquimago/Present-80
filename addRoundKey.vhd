@@ -8,3 +8,10 @@ entity addRoundKey is
  saida: out STD_LOGIC_VECTOR (63 downto 0)
  );
 end addRoundKey;
+
+architecture addRoundKey_arch of addRoundKey is
+begin
+
+saida:= bloco xor key(79 downto 16);
+
+end addRoundKey_arch;

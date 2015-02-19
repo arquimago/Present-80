@@ -32,8 +32,17 @@ port (
  );
 end component;
 
+component genRoundKey
+port (
+	key: in STD_LOGIC_VECTOR (79 downto 0);
+	bloco: in STD_LOGIC_VECTOR (63 downto 0);
+	round_counter: in STD_LOGIC_VECTOR(4 downto 0);	
+	saida: out STD_LOGIC_VECTOR (79 downto 0)
+);
+end component;
 
 begin
+	begin
 	for i in 0 to 30 loop
 		--aqui chamamos as coisas :P
 	end loop;

@@ -12,6 +12,6 @@ end addRoundKey;
 architecture addRoundKey_arch of addRoundKey is
 begin
 
-saida:= bloco xor key(79 downto 16);
+saida<= bloco xor key(79 downto 16);
 
 end addRoundKey_arch;

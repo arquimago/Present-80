@@ -56,3 +56,4 @@ set_global_assignment -name VHDL_FILE sBoxLayer.vhd
 set_global_assignment -name VHDL_FILE addRoundKey.vhd
 set_global_assignment -name VHDL_FILE pLayer.vhd
 set_global_assignment -name VHDL_FILE sBox4.vhd
+set_global_assignment -name VHDL_FILE genRoundKey.vhd

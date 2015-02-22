@@ -4,7 +4,6 @@ use IEEE.std_logic_1164.all;
 entity genRoundKey is
  port (
  key: in STD_LOGIC_VECTOR (79 downto 0);
- bloco: in STD_LOGIC_VECTOR (63 downto 0);
  round_counter: in STD_LOGIC_VECTOR(4 downto 0);
  saida: out STD_LOGIC_VECTOR (79 downto 0)
  );
@@ -56,9 +55,13 @@ begin
 	skey(79 downto 76)<=save2(7 downto 4);
 	
 	flag<=(round_counter+1)mod 2;
-
-	if (flag='1') then skey(15 downto 8)<=skey(15 downto 8) xor "10000000";
+	
+	process(flag)
+	begin
+	if (flag='1') then 
+		skey(15 downto 8)<=skey(15 downto 8) xor "10000000";
 	end if;
+	end process;
 	
 	round<=round_counter+1;
 	

@@ -1,0 +1,138 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+PACKAGE p80pack IS
+
+	PROCEDURE sort (SIGNAL in1, in2: IN INTEGER RANGE 0 TO limit;
+			SIGNAL min, max: OUT INTEGER RANGE 0 TO limit);
+
+END p80pack;
+
+PACKAGE BODY p80pack IS
+
+PROCEDURE sBox4(SIGNAL bloco: in STD_LOGIC_VECTOR (3 downto 0);
+				saida: out STD_LOGIC_VECTOR (3 downto 0)) IS
+ begin
+	process(bloco)
+		begin
+		case bloco is
+			when "0000" => saida <= "1100";
+			when "0001" => saida <= "0101";
+			when "0010" => saida <= "0110";
+			when "0011" => saida <= "1011";
+			when "0100" => saida <= "1001";
+			when "0101" => saida <= "0000";
+			when "0110" => saida <= "1010";
+			when "0111" => saida <= "1101";
+			when "1000" => saida <= "0011";
+			when "1001" => saida <= "1110";
+			when "1010" => saida <= "1111";
+			when "1011" => saida <= "1000";
+			when "1100" => saida <= "0100";
+			when "1101" => saida <= "0111";
+			when "1110" => saida <= "0001";
+			when "1111" => saida <= "0010";
+			when others => saida <= "ZZZZ";
+		end case;
+	end process;
+ end sBox4;
+ 
+ PROCEDURE sBoxLayer (
+	bloco: in STD_LOGIC_VECTOR (63 downto 0);
+	saida: out STD_LOGIC_VECTOR (63 downto 0)
+ ) IS
+ 
+ begin
+	sBox4 (bloco(3 downto 0),saida(3 downto 0));
+	sBox4 (bloco(7 downto 4),saida(7 downto 4));
+	sBox4 (bloco(11 downto 8),saida(11 downto 8));
+	sBox4 (bloco(15 downto 10),saida(15 downto 10));
+	sBox4 (bloco(19 downto 16),saida(19 downto 16));
+	sBox4 (bloco(23 downto 20),saida(23 downto 20));
+	sBox4 (bloco(27 downto 24),saida(27 downto 24));
+	sBox4 (bloco(31 downto 28),saida(31 downto 28));
+	sBox4 (bloco(35 downto 32),saida(35 downto 32));
+	sBox4 (bloco(39 downto 36),saida(39 downto 36));
+	sBox4 (bloco(43 downto 40),saida(43 downto 40));
+	sBox4 (bloco(47 downto 44),saida(47 downto 44));
+	sBox4 (bloco(51 downto 48),saida(51 downto 48));
+	sBox4 (bloco(55 downto 52),saida(55 downto 52));
+	sBox4 (bloco(59 downto 56),saida(59 downto 56));
+	sBox4 (bloco(63 downto 60),saida(63 downto 60));
+end sBoxLayer;
+
+procedure pLayer(
+ bloco: in STD_LOGIC_VECTOR (63 downto 0);
+ saida: out STD_LOGIC_VECTOR (63 downto 0)
+ ) is
+ 
+ begin
+	saida(0)<=bloco(0);
+	saida(1)<=bloco(16);
+	saida(2)<=bloco(32);
+	saida(3)<=bloco(48);
+	saida(4)<=bloco(1);
+	saida(5)<=bloco(17);
+	saida(6)<=bloco(33);
+	saida(7)<=bloco(49);
+	saida(8)<=bloco(2);
+	saida(9)<=bloco(18);
+	saida(10)<=bloco(34);
+	saida(11)<=bloco(50);
+	saida(12)<=bloco(3);
+	saida(13)<=bloco(19);
+	saida(14)<=bloco(35);
+	saida(15)<=bloco(51);
+	saida(16)<=bloco(4);
+	saida(17)<=bloco(20);
+	saida(18)<=bloco(36);
+	saida(19)<=bloco(52);
+	saida(20)<=bloco(5);
+	saida(21)<=bloco(21);
+	saida(22)<=bloco(37);
+	saida(23)<=bloco(53);
+	saida(24)<=bloco(6);
+	saida(25)<=bloco(22);
+	saida(26)<=bloco(38);
+	saida(27)<=bloco(54);
+	saida(28)<=bloco(7);
+	saida(29)<=bloco(23);
+	saida(30)<=bloco(39);
+	saida(31)<=bloco(55);
+	saida(32)<=bloco(8);
+	saida(33)<=bloco(24);
+	saida(34)<=bloco(40);
+	saida(35)<=bloco(56);
+	saida(36)<=bloco(9);
+	saida(37)<=bloco(25);
+	saida(38)<=bloco(41);
+	saida(39)<=bloco(57);
+	saida(40)<=bloco(10);
+	saida(41)<=bloco(26);
+	saida(42)<=bloco(42);
+	saida(43)<=bloco(58);
+	saida(44)<=bloco(11);
+	saida(45)<=bloco(27);
+	saida(46)<=bloco(43);
+	saida(47)<=bloco(59);
+	saida(48)<=bloco(12);
+	saida(49)<=bloco(28);
+	saida(50)<=bloco(44);
+	saida(51)<=bloco(60);
+	saida(52)<=bloco(13);
+	saida(53)<=bloco(29);
+	saida(54)<=bloco(45);
+	saida(55)<=bloco(61);
+	saida(56)<=bloco(14);
+	saida(57)<=bloco(30);
+	saida(58)<=bloco(46);
+	saida(59)<=bloco(62);
+	saida(60)<=bloco(15);
+	saida(61)<=bloco(31);
+	saida(62)<=bloco(47);
+	saida(63)<=bloco(63);
+
+end pLayer;
+ 
+ 
+END p80pack;

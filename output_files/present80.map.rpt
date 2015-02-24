@@ -1,9 +1,5 @@
 Analysis & Synthesis report for present80
-<<<<<<< HEAD
-Tue Feb 24 13:47:19 2015
-=======
-Thu Feb 19 16:37:55 2015
->>>>>>> parent of 796cd56... "main" quase pronto
+Tue Feb 24 15:20:27 2015
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -40,11 +36,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-<<<<<<< HEAD
-; Analysis & Synthesis Status        ; Failed - Tue Feb 24 13:47:19 2015          ;
-=======
-; Analysis & Synthesis Status        ; Failed - Thu Feb 19 16:37:55 2015          ;
->>>>>>> parent of 796cd56... "main" quase pronto
+; Analysis & Synthesis Status        ; Failed - Tue Feb 24 15:20:27 2015          ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; present80                                  ;
 ; Top-level Entity Name              ; present80                                  ;
@@ -163,64 +155,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-<<<<<<< HEAD
-    Info: Processing started: Tue Feb 24 13:47:18 2015
+    Info: Processing started: Tue Feb 24 15:20:26 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off present80 -c present80
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Error (10500): VHDL syntax error at present80.vhd(56) near text "for";  expecting "end", or "(", or an identifier ("for" is a reserved keyword), or a concurrent statement File: C:/Users/Th/Google Drive/CC/CD2/Present-80/present80.vhd Line: 56
-Error (10500): VHDL syntax error at present80.vhd(65) near text "loop";  expecting ";", or an identifier ("loop" is a reserved keyword), or "architecture" File: C:/Users/Th/Google Drive/CC/CD2/Present-80/present80.vhd Line: 65
-=======
-    Info: Processing started: Thu Feb 19 16:37:54 2015
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off present80 -c present80
-Warning (20028): Parallel compilation is not licensed and has been disabled
-Error (10500): VHDL syntax error at present80.vhd(45) near text "begin";  expecting "end", or "(", or an identifier ("begin" is a reserved keyword), or a concurrent statement File: C:/Users/Th/Google Drive/CC/CD2/Present-80/present80.vhd Line: 45
->>>>>>> parent of 796cd56... "main" quase pronto
-Info (12021): Found 0 design units, including 0 entities, in source file present80.vhd
-Info (12021): Found 2 design units, including 1 entities, in source file sboxlayer.vhd
-    Info (12022): Found design unit 1: sBoxLayer-sBoxLayer_arch
-    Info (12023): Found entity 1: sBoxLayer
-Info (12021): Found 2 design units, including 1 entities, in source file addroundkey.vhd
-    Info (12022): Found design unit 1: addRoundKey-addRoundKey_arch
-    Info (12023): Found entity 1: addRoundKey
-Info (12021): Found 2 design units, including 1 entities, in source file player.vhd
-    Info (12022): Found design unit 1: pLayer-pLayer_arch
-    Info (12023): Found entity 1: pLayer
-Info (12021): Found 2 design units, including 1 entities, in source file sbox4.vhd
-    Info (12022): Found design unit 1: sBox4-sBox4_arch
-    Info (12023): Found entity 1: sBox4
-<<<<<<< HEAD
-Error (10500): VHDL syntax error at genRoundKey.vhd(33) near text ":=";  expecting "(", or "'", or "." File: C:/Users/Th/Google Drive/CC/CD2/Present-80/genRoundKey.vhd Line: 33
-Error (10500): VHDL syntax error at genRoundKey.vhd(34) near text ":=";  expecting "(", or "'", or "." File: C:/Users/Th/Google Drive/CC/CD2/Present-80/genRoundKey.vhd Line: 34
-Error (10500): VHDL syntax error at genRoundKey.vhd(35) near text ":=";  expecting "(", or "'", or "." File: C:/Users/Th/Google Drive/CC/CD2/Present-80/genRoundKey.vhd Line: 35
-Error (10500): VHDL syntax error at genRoundKey.vhd(36) near text ":=";  expecting "(", or "'", or "." File: C:/Users/Th/Google Drive/CC/CD2/Present-80/genRoundKey.vhd Line: 36
-Error (10500): VHDL syntax error at genRoundKey.vhd(37) near text ":=";  expecting "(", or "'", or "." File: C:/Users/Th/Google Drive/CC/CD2/Present-80/genRoundKey.vhd Line: 37
-Error (10500): VHDL syntax error at genRoundKey.vhd(38) near text ":=";  expecting "(", or "'", or "." File: C:/Users/Th/Google Drive/CC/CD2/Present-80/genRoundKey.vhd Line: 38
-Error (10500): VHDL syntax error at genRoundKey.vhd(39) near text ":=";  expecting "(", or "'", or "." File: C:/Users/Th/Google Drive/CC/CD2/Present-80/genRoundKey.vhd Line: 39
-Error (10500): VHDL syntax error at genRoundKey.vhd(40) near text ":=";  expecting "(", or "'", or "." File: C:/Users/Th/Google Drive/CC/CD2/Present-80/genRoundKey.vhd Line: 40
-Error (10500): VHDL syntax error at genRoundKey.vhd(41) near text ":=";  expecting "(", or "'", or "." File: C:/Users/Th/Google Drive/CC/CD2/Present-80/genRoundKey.vhd Line: 41
-Error (10500): VHDL syntax error at genRoundKey.vhd(42) near text ":=";  expecting "(", or "'", or "." File: C:/Users/Th/Google Drive/CC/CD2/Present-80/genRoundKey.vhd Line: 42
-Error (10500): VHDL syntax error at genRoundKey.vhd(43) near text ":=";  expecting "(", or "'", or "." File: C:/Users/Th/Google Drive/CC/CD2/Present-80/genRoundKey.vhd Line: 43
-Error (10500): VHDL syntax error at genRoundKey.vhd(44) near text ":=";  expecting "(", or "'", or "." File: C:/Users/Th/Google Drive/CC/CD2/Present-80/genRoundKey.vhd Line: 44
-Error (10500): VHDL syntax error at genRoundKey.vhd(45) near text ":=";  expecting "(", or "'", or "." File: C:/Users/Th/Google Drive/CC/CD2/Present-80/genRoundKey.vhd Line: 45
-Error (10500): VHDL syntax error at genRoundKey.vhd(46) near text ":=";  expecting "(", or "'", or "." File: C:/Users/Th/Google Drive/CC/CD2/Present-80/genRoundKey.vhd Line: 46
-Error (10500): VHDL syntax error at genRoundKey.vhd(47) near text ":=";  expecting "(", or "'", or "." File: C:/Users/Th/Google Drive/CC/CD2/Present-80/genRoundKey.vhd Line: 47
-Error (10500): VHDL syntax error at genRoundKey.vhd(48) near text ":=";  expecting "(", or "'", or "." File: C:/Users/Th/Google Drive/CC/CD2/Present-80/genRoundKey.vhd Line: 48
-Error (10500): VHDL syntax error at genRoundKey.vhd(49) near text ":=";  expecting "(", or "'", or "." File: C:/Users/Th/Google Drive/CC/CD2/Present-80/genRoundKey.vhd Line: 49
-Error (10500): VHDL syntax error at genRoundKey.vhd(50) near text ":=";  expecting "(", or "'", or "." File: C:/Users/Th/Google Drive/CC/CD2/Present-80/genRoundKey.vhd Line: 50
-Error (10500): VHDL syntax error at genRoundKey.vhd(51) near text ":=";  expecting "(", or "'", or "." File: C:/Users/Th/Google Drive/CC/CD2/Present-80/genRoundKey.vhd Line: 51
-Info (12021): Found 0 design units, including 0 entities, in source file genroundkey.vhd
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 21 errors, 1 warning
+Info (12021): Found 2 design units, including 1 entities, in source file present80.vhd
+    Info (12022): Found design unit 1: present80-present80_arch
+    Info (12023): Found entity 1: present80
+Info (12021): Found 2 design units, including 0 entities, in source file procedures.vhd
+    Info (12022): Found design unit 1: procedures
+    Info (12022): Found design unit 2: procedures-body
+Error (10559): VHDL Subprogram Call error at procedures.vhd(207): actual for formal parameter "bloco" must be a "signal" File: C:/Users/Th/Google Drive/CC/CD2/Present-80/procedures.vhd Line: 207
+Error (10559): VHDL Subprogram Call error at procedures.vhd(207): actual for formal parameter "saida" must be a "signal" File: C:/Users/Th/Google Drive/CC/CD2/Present-80/procedures.vhd Line: 207
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
     Error: Peak virtual memory: 490 megabytes
-    Error: Processing ended: Tue Feb 24 13:47:19 2015
-=======
-Error (10500): VHDL syntax error at genRoundKey.vhd(60) near text "if";  expecting "end", or "(", or an identifier ("if" is a reserved keyword), or a concurrent statement File: C:/Users/Th/Google Drive/CC/CD2/Present-80/genRoundKey.vhd Line: 60
-Error (10500): VHDL syntax error at genRoundKey.vhd(60) near text "then";  expecting "<=" File: C:/Users/Th/Google Drive/CC/CD2/Present-80/genRoundKey.vhd Line: 60
-Error (10500): VHDL syntax error at genRoundKey.vhd(61) near text "if";  expecting ";", or an identifier ("if" is a reserved keyword), or "architecture" File: C:/Users/Th/Google Drive/CC/CD2/Present-80/genRoundKey.vhd Line: 61
-Info (12021): Found 0 design units, including 0 entities, in source file genroundkey.vhd
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 4 errors, 1 warning
-    Error: Peak virtual memory: 490 megabytes
-    Error: Processing ended: Thu Feb 19 16:37:55 2015
->>>>>>> parent of 796cd56... "main" quase pronto
+    Error: Processing ended: Tue Feb 24 15:20:27 2015
     Error: Elapsed time: 00:00:01
     Error: Total CPU time (on all processors): 00:00:01
 

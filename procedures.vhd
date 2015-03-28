@@ -1,15 +1,57 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+package present_funcoes is
+  function sBox4(input : std_logic_vector(3 downto 0)) return std_logic_vector(3 downto 0);
+  function soma1 (input : STD_LOGIC_VECTOR(4 downto 0)) return STD_LOGIC_VECTOR(4 downto 0);
+end present_funcoes ;
+
+package body present_funcoes is
+  function sBox4(input : std_logic_vector(3 downto 0)) return std_logic_vector(3 downto 0) is
+  begin
+    case(input) is
+      when x"0" => return x"C";
+      when x"1" => return x"5";
+      when x"2" => return x"6";
+      when x"3" => return x"B";
+      when x"4" => return x"9";
+      when x"5" => return x"0";
+      when x"6" => return x"A";
+      when x"7" => return x"D";
+      when x"8" => return x"3";
+      when x"9" => return x"E";
+      when x"A" => return x"F";
+      when x"B" => return x"8";
+      when x"C" => return x"4";
+      when x"D" => return x"7";
+      when x"E" => return x"1";
+      when x"F" => return x"2";
+      when others => return "ZZZZ";
+    end case ;
+  end sBox4;
+  
+ function soma1(input : STD_LOGIC_VECTOR(4 downto 0)) return STD_LOGIC_VECTOR(4 downto 0) is
+  
+  variable soma:STD_LOGIC_VECTOR(4 downto 0);
+  variable c:std_logic;
+  
+  begin
+	c := '0';
+	for i in 0 to 4 loop
+		soma(i) := a(i) xor b(i) xor c;
+		c := (a(i) and b(i)) or ((a(i) xor b(i)) and c);
+	end loop;
+	return soma;
+end soma1
+  
+  
+end present_funcoes ;
+
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
 PACKAGE procedures IS
-	procedure soma5bits (
-		SIGNAL cin: in STD_LOGIC;
-		SIGNAL a,b: in STD_LOGIC_VECTOR (3 DOWNTO 0);
-		SIGNAL cout: out STD_LOGIC;
-		SIGNAL s: out STD_LOGIC_VECTOR (3 DOWNTO 0));
-	procedure sBox4(
-		SIGNAL bloco: in STD_LOGIC_VECTOR (3 downto 0);
-		SIGNAL saida: out STD_LOGIC_VECTOR (3 downto 0));
 	procedure sBoxLayer (
 		SIGNAL bloco: in STD_LOGIC_VECTOR (63 downto 0);
 		SIGNAL saida: out STD_LOGIC_VECTOR (63 downto 0));
@@ -30,54 +72,28 @@ END procedures;
 
 PACKAGE BODY procedures IS
 
-
-procedure soma5bits (
-	SIGNAL cin: in STD_LOGIC;
-	SIGNAL a,b: in STD_LOGIC_VECTOR (3 DOWNTO 0);
-	SIGNAL cout: out STD_LOGIC;
-	SIGNAL s: out STD_LOGIC_VECTOR (3 DOWNTO 0)
-) is
-
-	variable soma:std_logic_vector(4 downto 0);
-	variable c:std_logic;
-	begin
-	c := cin;
-	for i in 0 to 4 loop
-		soma(i) := a(i) xor b(i) xor c;
-		c := (a(i) and b(i)) or ((a(i) xor b(i)) and c);
-	end loop;
-	cout <= c;
-	s <= soma;
-end soma5bits;
-
-PROCEDURE sBox4(SIGNAL bloco: in STD_LOGIC_VECTOR (3 downto 0);
-				SIGNAL saida: out STD_LOGIC_VECTOR (3 downto 0)) IS
- begin
-		
- end sBox4;
-
  PROCEDURE sBoxLayer (
 	SIGNAL bloco: in STD_LOGIC_VECTOR (63 downto 0);
 	SIGNAL saida: out STD_LOGIC_VECTOR (63 downto 0)
  ) IS
  
  begin
-	sBox4 (bloco(3 downto 0),saida(3 downto 0));
-	sBox4 (bloco(7 downto 4),saida(7 downto 4));
-	sBox4 (bloco(11 downto 8),saida(11 downto 8));
-	sBox4 (bloco(15 downto 10),saida(15 downto 10));
-	sBox4 (bloco(19 downto 16),saida(19 downto 16));
-	sBox4 (bloco(23 downto 20),saida(23 downto 20));
-	sBox4 (bloco(27 downto 24),saida(27 downto 24));
-	sBox4 (bloco(31 downto 28),saida(31 downto 28));
-	sBox4 (bloco(35 downto 32),saida(35 downto 32));
-	sBox4 (bloco(39 downto 36),saida(39 downto 36));
-	sBox4 (bloco(43 downto 40),saida(43 downto 40));
-	sBox4 (bloco(47 downto 44),saida(47 downto 44));
-	sBox4 (bloco(51 downto 48),saida(51 downto 48));
-	sBox4 (bloco(55 downto 52),saida(55 downto 52));
-	sBox4 (bloco(59 downto 56),saida(59 downto 56));
-	sBox4 (bloco(63 downto 60),saida(63 downto 60));
+	saida(3 downto 0)<=sBox4 (bloco(3 downto 0));
+	saida(7 downto 4)<=sBox4 (bloco(7 downto 4));
+	saida(11 downto 8)<=sBox4 (bloco(11 downto 8));
+	saida(15 downto 10)<=sBox4 (bloco(15 downto 10));
+	saida(19 downto 16)<=sBox4 (bloco(19 downto 16));
+	saida(23 downto 20)<=sBox4 (bloco(23 downto 20));
+	saida(27 downto 24)<=sBox4 (bloco(27 downto 24));
+	saida(31 downto 28)<=sBox4 (bloco(31 downto 28));
+	saida(35 downto 32)<=sBox4 (bloco(35 downto 32));
+	saida(39 downto 36)<=sBox4 (bloco(39 downto 36));
+	saida(43 downto 40)<=sBox4 (bloco(43 downto 40));
+	saida(47 downto 44)<=sBox4 (bloco(47 downto 44));
+	saida(51 downto 48)<=sBox4 (bloco(51 downto 48));
+	saida(55 downto 52)<=sBox4 (bloco(55 downto 52));
+	saida(59 downto 56)<=sBox4 (bloco(59 downto 56));
+	saida(63 downto 60)<=sBox4 (bloco(63 downto 60));
 end sBoxLayer;
 
 procedure pLayer(
@@ -204,17 +220,16 @@ begin
 	skey(76 downto 72):=skey(79 downto 73);
 	skey(79 downto 77):=save1(7 downto 5);
 	
-	sBox4(skey(79 downto 76),save2(7 downto 4));
-	skey(79 downto 76):=save2(7 downto 4);
-	
-	flag:=(round_counter+1)mod 2;
+	skey(79 downto 76):=sBox4(skey(79 downto 76));
+		
+	round:=soma1(round_counter);
+	flag:=round(0);
 
-	if (flag='1') then skey(15 downto 8)<=skey(15 downto 8) xor "10000000";
+	if (flag='1') then 
+		skey(15 downto 8):=skey(15 downto 8) xor "10000000";
 	end if;
 	
-	round<=round_counter+1;
-	
-	skey(19 downto 16)<=skey(19 downto 16) xor round(4 downto 1);
+	skey(19 downto 16):=skey(19 downto 16) xor round(4 downto 1);
 	
 	saida<=skey;
 	

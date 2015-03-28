@@ -1,5 +1,5 @@
 Analysis & Synthesis report for present80
-Tue Feb 24 15:20:27 2015
+Wed Feb 25 10:40:10 2015
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue Feb 24 15:20:27 2015          ;
+; Analysis & Synthesis Status        ; Failed - Wed Feb 25 10:40:10 2015          ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; present80                                  ;
 ; Top-level Entity Name              ; present80                                  ;
@@ -155,21 +155,60 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Tue Feb 24 15:20:26 2015
+    Info: Processing started: Wed Feb 25 10:40:08 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off present80 -c present80
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file present80.vhd
-    Info (12022): Found design unit 1: present80-present80_arch
+Info (12021): Found 6 design units, including 1 entities, in source file present80.vhd
+    Info (12022): Found design unit 1: present_funcoes
+    Info (12022): Found design unit 2: present_funcoes-body
+    Info (12022): Found design unit 3: procedures
+    Info (12022): Found design unit 4: procedures-body
+    Info (12022): Found design unit 5: present80-present80_arch
     Info (12023): Found entity 1: present80
-Info (12021): Found 2 design units, including 0 entities, in source file procedures.vhd
-    Info (12022): Found design unit 1: procedures
-    Info (12022): Found design unit 2: procedures-body
-Error (10559): VHDL Subprogram Call error at procedures.vhd(207): actual for formal parameter "bloco" must be a "signal" File: C:/Users/Th/Google Drive/CC/CD2/Present-80/procedures.vhd Line: 207
-Error (10559): VHDL Subprogram Call error at procedures.vhd(207): actual for formal parameter "saida" must be a "signal" File: C:/Users/Th/Google Drive/CC/CD2/Present-80/procedures.vhd Line: 207
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
+Info (12127): Elaborating entity "present80" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at present80.vhd(269): object "zero" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at present80.vhd(284): signal "key" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at present80.vhd(284): signal "entrada_aux1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at present80.vhd(286): signal "entrada_aux2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at present80.vhd(287): signal "entrada_aux3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at present80.vhd(288): signal "key" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at present80.vhd(288): signal "contador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10036): Verilog HDL or VHDL warning at present80.vhd(193): object "save2" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at present80.vhd(290): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at present80.vhd(290): signal "c" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at present80.vhd(291): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at present80.vhd(291): signal "c" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at present80.vhd(293): signal "soma" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at present80.vhd(294): signal "soma" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at present80.vhd(295): signal "entrada_aux4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at present80.vhd(296): signal "chave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at present80.vhd(296): signal "entrada_aux1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at present80.vhd(298): signal "chave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at present80.vhd(298): signal "entrada_aux1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Error (10031): Net "entrada_aux1[63]" at present80.vhd(14) is already driven by input port "bloco[63]", and cannot be driven by another signal File: C:/Users/Th/Google Drive/CC/CD2/Present-80/present80.vhd Line: 14
+Error (10032): "bloco[63]" was declared at present80.vhd(258) File: C:/Users/Th/Google Drive/CC/CD2/Present-80/present80.vhd Line: 258
+Error (10031): Net "entrada_aux1[62]" at present80.vhd(14) is already driven by input port "bloco[62]", and cannot be driven by another signal File: C:/Users/Th/Google Drive/CC/CD2/Present-80/present80.vhd Line: 14
+Error (10032): "bloco[62]" was declared at present80.vhd(258) File: C:/Users/Th/Google Drive/CC/CD2/Present-80/present80.vhd Line: 258
+Error (10031): Net "entrada_aux1[61]" at present80.vhd(14) is already driven by input port "bloco[61]", and cannot be driven by another signal File: C:/Users/Th/Google Drive/CC/CD2/Present-80/present80.vhd Line: 14
+Error (10032): "bloco[61]" was declared at present80.vhd(258) File: C:/Users/Th/Google Drive/CC/CD2/Present-80/present80.vhd Line: 258
+Error (10031): Net "entrada_aux1[60]" at present80.vhd(14) is already driven by input port "bloco[60]", and cannot be driven by another signal File: C:/Users/Th/Google Drive/CC/CD2/Present-80/present80.vhd Line: 14
+Error (10032): "bloco[60]" was declared at present80.vhd(258) File: C:/Users/Th/Google Drive/CC/CD2/Present-80/present80.vhd Line: 258
+Error (10031): Net "entrada_aux1[59]" at present80.vhd(14) is already driven by input port "bloco[59]", and cannot be driven by another signal File: C:/Users/Th/Google Drive/CC/CD2/Present-80/present80.vhd Line: 14
+Error (10032): "bloco[59]" was declared at present80.vhd(258) File: C:/Users/Th/Google Drive/CC/CD2/Present-80/present80.vhd Line: 258
+Error (10031): Net "entrada_aux1[58]" at present80.vhd(14) is already driven by input port "bloco[58]", and cannot be driven by another signal File: C:/Users/Th/Google Drive/CC/CD2/Present-80/present80.vhd Line: 14
+Error (10032): "bloco[58]" was declared at present80.vhd(258) File: C:/Users/Th/Google Drive/CC/CD2/Present-80/present80.vhd Line: 258
+Error (10031): Net "entrada_aux1[57]" at present80.vhd(14) is already driven by input port "bloco[57]", and cannot be driven by another signal File: C:/Users/Th/Google Drive/CC/CD2/Present-80/present80.vhd Line: 14
+Error (10032): "bloco[57]" was declared at present80.vhd(258) File: C:/Users/Th/Google Drive/CC/CD2/Present-80/present80.vhd Line: 258
+Error (10031): Net "entrada_aux1[56]" at present80.vhd(14) is already driven by input port "bloco[56]", and cannot be driven by another signal File: C:/Users/Th/Google Drive/CC/CD2/Present-80/present80.vhd Line: 14
+Error (10032): "bloco[56]" was declared at present80.vhd(258) File: C:/Users/Th/Google Drive/CC/CD2/Present-80/present80.vhd Line: 258
+Error (10031): Net "entrada_aux1[55]" at present80.vhd(14) is already driven by input port "bloco[55]", and cannot be driven by another signal File: C:/Users/Th/Google Drive/CC/CD2/Present-80/present80.vhd Line: 14
+Error (10032): "bloco[55]" was declared at present80.vhd(258) File: C:/Users/Th/Google Drive/CC/CD2/Present-80/present80.vhd Line: 258
+Error (10031): Net "entrada_aux1[54]" at present80.vhd(14) is already driven by input port "bloco[54]", and cannot be driven by another signal File: C:/Users/Th/Google Drive/CC/CD2/Present-80/present80.vhd Line: 14
+Error (12153): Can't elaborate top-level user hierarchy
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 20 errors, 20 warnings
     Error: Peak virtual memory: 490 megabytes
-    Error: Processing ended: Tue Feb 24 15:20:27 2015
-    Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:01
+    Error: Processing ended: Wed Feb 25 10:40:10 2015
+    Error: Elapsed time: 00:00:02
+    Error: Total CPU time (on all processors): 00:00:02
 
 
